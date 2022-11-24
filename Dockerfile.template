@@ -20,7 +20,6 @@ RUN set -ex \
         cmake \
         wget \
         libboost-graph-dev \
-        libcgal-dev \
         libpq-dev \
         postgresql-server-dev-${PG_MAJOR} \
  && wget -O pgrouting.tar.gz "https://github.com/pgRouting/pgrouting/archive/v${PGROUTING_VERSION}.tar.gz" \
