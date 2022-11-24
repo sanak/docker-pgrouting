@@ -67,7 +67,7 @@ for version in "${versions[@]}"; do
     else
       ourVersions="$(grep -E "^$pgroutingVersion[.]" <<<"$allVersions")"
       fullVersion=
-      for tryVersion in $ourVersions: do
+      for tryVersion in $ourVersions; do
         if srcSha256="$(curl -sSL "https://github.com/pgRouting/pgrouting/archive/v${tryVersion}.tar.gz" | sha256sum | awk '{ print $1 }')" && [ -n "$srcSha256" ]; then
           fullVersion="$tryVersion"
           break
